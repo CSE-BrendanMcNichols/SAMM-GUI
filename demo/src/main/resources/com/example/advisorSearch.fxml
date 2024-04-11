@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Avatar id="AdvisePhoto" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
+               <children>
+                  <Label text="Name" textAlignment="CENTER" />
+                  <Label text="Information" />
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0">
+                     <children>
+                        <Line endX="100.0" layoutX="168.0" startX="-100.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <HBox prefHeight="38.0" prefWidth="334.0">
+               <children>
+                  <TextField fx:id="AdvisorStudentSearchText" prefHeight="67.0" prefWidth="249.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="AdvisorStudentSearch" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" text="Search">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox fx:id="SearchResultsVBox" prefHeight="200.0" prefWidth="305.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
