@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Avatar id="AdvisePhoto" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Hello" textAlignment="CENTER" />
+            <Label text="What woud you like to do today?" />
+            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+            <Button mnemonicParsing="false" text="View Your Information" />
+            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+            <Button mnemonicParsing="false" text="View Your Students" />
+            <AnchorPane layoutX="10.0" layoutY="46.0" prefHeight="42.0" prefWidth="334.0" />
+            <Button mnemonicParsing="false" text="View Or Send A Message" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
