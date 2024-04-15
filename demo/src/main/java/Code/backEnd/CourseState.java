@@ -1,4 +1,4 @@
-package backEnd;
+package Code.backEnd;
 
 public enum CourseState {
     NOT_STARTED,
