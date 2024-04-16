@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
+<?import java.net.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -47,4 +48,7 @@
    <bottom>
       <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
+   <stylesheets>
+     <URL value="@style.css" />
+   </stylesheets>
 </BorderPane>

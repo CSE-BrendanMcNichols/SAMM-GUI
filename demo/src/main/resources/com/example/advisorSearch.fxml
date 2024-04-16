@@ -2,6 +2,7 @@
 
 <?import com.gluonhq.charm.glisten.control.Avatar?>
 <?import com.gluonhq.charm.glisten.control.TextField?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -52,6 +53,9 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
+   <stylesheets>
+     <URL value="@style.css" />
+   </stylesheets>
 </BorderPane>
