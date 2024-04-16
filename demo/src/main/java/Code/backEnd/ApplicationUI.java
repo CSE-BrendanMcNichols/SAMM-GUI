@@ -122,7 +122,7 @@ public class ApplicationUI {
 
 
     private static void checkProgress(User student){
-        Student.checkProgress(student);
+        //Student.checkProgress(student);
     }
     
     

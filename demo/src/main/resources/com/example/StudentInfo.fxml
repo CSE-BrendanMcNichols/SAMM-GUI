@@ -28,15 +28,19 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="305.0">
+            <VBox prefHeight="389.0" prefWidth="334.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" text="College" />
+                  <Label alignment="CENTER_RIGHT" text="Year" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="department" />
+                  <Label text="Major" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Role" />
+                  <Label text="Minor" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Student Amount" />
+                  <Label text="Application Area" />
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <Label text="GPA" />
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <Label text="Current Classes" />
                </children>
                <padding>
                   <Insets left="20.0" right="20.0" />

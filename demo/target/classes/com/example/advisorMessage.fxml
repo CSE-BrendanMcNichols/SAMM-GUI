@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import java.net.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -19,8 +21,7 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
                <children>
-                  <Label text="Name" textAlignment="CENTER" />
-                  <Label text="Information" />
+                  <Label text="Your Messages" textAlignment="CENTER" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0">
                      <children>
                         <Line endX="100.0" layoutX="168.0" startX="-100.0" />
@@ -28,16 +29,12 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="305.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="334.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" text="College" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="department" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Role" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Student Amount" />
+                  <ChoiceBox prefHeight="25.0" prefWidth="185.0" />
                </children>
+            </HBox>
+            <VBox fx:id="SearchResultsVBox" prefHeight="388.0" prefWidth="334.0">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
@@ -46,7 +43,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />

@@ -10,6 +10,10 @@
 }
 
 .button:hover {
-    -fx-background-color: #D3D3D3; /* Change background color on hover */
-    -fx-text-fill: #8B0000; /* Change text color on hover */
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: #8B0000;
+}
+
+.label {
+    -fx-text-fill: white;
 }
