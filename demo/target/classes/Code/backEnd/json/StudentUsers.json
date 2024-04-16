@@ -1,0 +1,118 @@
+[
+  {
+    "lastName": "West",
+    "notes": [
+      "note1",
+      "note2",
+      "note3"
+    ],
+    "uscid": "12345",
+    "currentElectives": [],
+    "overallGrade": 3.5,
+    "completedClasses": {
+      "f8e10b3a-146b-4d43-a3d8-647028c98641": "B",
+      "12224407-e656-4fe7-9078-88f1d9dc8325": "A",
+      "93c533e9-b50e-4557-b4da-9f31c0b4b839": "A",
+      "a014f77a-2ac5-4f22-87d7-f0ab623dce64": "A",
+      "3cca9c4e-a195-4759-a761-cfe09adb20b8": "A",
+      "377ddfb9-de27-4996-8f72-c86999f08c03": "A",
+      "c85eb519-e97b-488b-ba02-2947764cfe92": "A",
+      "cecc9003-5bf5-4d17-b01d-895f24ea03a2": "A",
+      "39046cda-f913-4f9b-a002-f06e7c59f235": "B",
+      "e4c7001a-fadb-481d-b4e6-162dfa25744c": "A",
+      "b0687a3a-9e0f-479a-8df8-14f5478ef547": "A",
+      "f9bc9ca2-9fe9-43eb-8444-2f0fc53da6c3": "A",
+      "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23": "A",
+      "732e0849-4531-43d5-ae8e-363b59958631": "A",
+      "1e45ee57-74aa-47f0-ae20-46d973457505": "B",
+      "980e1056-4ed2-4459-b0e7-56d78eca5d73": "B",
+      "5844e157-e966-4ca8-a60b-a86f76903c6d": "B",
+      "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627": "B",
+      "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6": "B",
+      "730005f1-113d-446e-865c-31b46dfbc924": "A"
+    },
+    "uuid": "daa77ead-9fcb-47f0-964d-3cff541591cd",
+    "currentClasses": [
+      "6c8202fd-b31b-4647-b551-b7f4dbf007a0",
+      "96cd3d5d-590a-4567-9cc3-787e03cc5140",
+      "a442d36a-1afb-4864-83f7-e1bb46a29f6d",
+      "554472ab-c7cb-4ac6-bf69-0d8b58a99d3d",
+      "01f15c99-15af-4569-8cf0-4fe263053ed8",
+      "c30f5f36-fc9c-49d4-b5c4-baec9cc82194"
+    ],
+    "firstName": "Brax",
+    "advisor": "2c29e60d-c02e-450a-8ac1-0c65266cabac",
+    "password": "pass123",
+    "major": "29e4b605-07c5-4c46-bca3-c4e2ed618e4d",
+    "credits": 27,
+    "gradeYear": "Junior",
+    "applicationArea": "Digital Design",
+    "completedElectives": [],
+    "email": "brax@email.sc.edu",
+    "username": "braxwest"
+  },
+  {
+    "lastName": "White",
+    "notes": [
+      "note1",
+      "note2",
+      "note3"
+    ],
+    "uscid": "SE83331",
+    "currentElectives": [
+      "dbf91385-3def-4028-baa6-66dcae051c7c",
+      "dbf91385-3def-4028-baa6-66dcae051c7c"
+    ],
+    "overallGrade": 3.5,
+    "completedClasses": {
+      "4fc2562f-6b69-4aab-9a12-6f635932bc72": "A",
+      "7c479721-2c3c-48df-a7b6-be149c9b67a3": "B"
+    },
+    "uuid": "291e107a-50eb-4c59-ba8a-7031f4a9f0e5",
+    "currentClasses": [
+      "0ee3fc1c-ec19-4637-aeb5-614577b6d22f"
+    ],
+    "firstName": "Jane",
+    "advisor": "2c29e60d-c02e-450a-8ac1-0c65266cabac",
+    "password": "word123pass",
+    "major": "29e4b605-07c5-4c46-bca3-c4e2ed618e4d",
+    "credits": 27,
+    "gradeYear": "Sophomore",
+    "applicationArea": "Test Area",
+    "completedElectives": [],
+    "email": "JaneWhite@email.sc.edu",
+    "username": "JaneWhite"
+  },
+  {
+    "lastName": "Hill",
+    "notes": [
+      "note1",
+      "note2",
+      "note3"
+    ],
+    "uscid": "CSST1",
+    "currentElectives": [
+      "dbf91385-3def-4028-baa6-66dcae051c7c",
+      "dbf91385-3def-4028-baa6-66dcae051c7c"
+    ],
+    "overallGrade": 3.5,
+    "completedClasses": {
+      "4fc2562f-6b69-4aab-9a12-6f635932bc72": "A",
+      "7c479721-2c3c-48df-a7b6-be149c9b67a3": "B"
+    },
+    "uuid": "a0370490-52e6-417d-8e0e-5d7fd3c31d12",
+    "currentClasses": [
+      "0ee3fc1c-ec19-4637-aeb5-614577b6d22f"
+    ],
+    "firstName": "Tawnie",
+    "advisor": "8d04937c-2158-445c-8f0f-bd86de7fdaa4",
+    "password": "pass123",
+    "major": "29e4b605-07c5-4c46-bca3-c4e2ed618e4d",
+    "credits": 27,
+    "gradeYear": "Sophomore",
+    "applicationArea": "Something",
+    "completedElectives": [],
+    "email": "tawniehill@email.sc.edu",
+    "username": "tawniehill"
+  }
+]

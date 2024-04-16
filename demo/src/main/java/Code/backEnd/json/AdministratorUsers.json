@@ -1,0 +1,20 @@
+[
+    {
+      "username": "JohnDoe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "password": "Password123",
+      "email": "JohnDoe@email.sc.edu",
+      "uscid": "HE82021",
+      "uuid": "886c33a5-a9c1-4314-8284-ec73d657a973"
+    },
+    {
+      "username": "JohnSmith",
+      "firstName": "John",
+      "lastName": "Smith",
+      "password": "Password321",
+      "email": "JohnSmith@email.sc.edu",
+      "uscid": "JY88081",
+      "uuid": "f792f8c0-054e-4dc1-87d6-56890f8b5b78"
+    }
+  ]
