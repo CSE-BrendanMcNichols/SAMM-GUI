@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -13,9 +14,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import java.net.*?>
 
-<View fx:id="signinBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
@@ -50,11 +50,11 @@
                   </Pane>
                </children>
             </VBox>
-            <Button fx:id="advisorLoginButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" />
+            <Button fx:id="advisorLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" />
             <AnchorPane prefHeight="30.0" prefWidth="200.0" />
-            <Button fx:id="adminsitratorLoginButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" text="Administrator" textAlignment="CENTER" />
+            <Button fx:id="adminsitratorLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Administrator" textAlignment="CENTER" />
             <AnchorPane prefHeight="25.0" prefWidth="200.0" />
-            <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" text="Student" textAlignment="CENTER" />
+            <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Student" textAlignment="CENTER" />
             <AnchorPane prefHeight="150.0" prefWidth="200.0">
                <children>
                   <Button fx:id="signupButton" layoutX="247.0" layoutY="111.0" mnemonicParsing="false" text="Sign Up" />
@@ -68,4 +68,4 @@
    <stylesheets>
      <URL value="@style.css" />
    </stylesheets>
-</View>
+</BorderPane>
