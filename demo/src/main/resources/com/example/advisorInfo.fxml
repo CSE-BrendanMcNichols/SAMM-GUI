@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import java.net.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advisorInfoController">
    <center>
@@ -27,23 +26,22 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="305.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" text="College" />
+                  <Label fx:id="Department" text="department:" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="department" />
+                  <Label fx:id="Role" text="Role:" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Role" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Student Amount" />
+                  <Label fx:id="Student" text="Student Amount:" />
                </children>
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
+            <Button fx:id="Back" mnemonicParsing="false" text="Back" onAction="#Back"/>
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="83.0" text="Logout" BorderPane.alignment="CENTER" onAction="#Logout"/>
    </bottom>
    <stylesheets>
      <URL value="@style.css" />

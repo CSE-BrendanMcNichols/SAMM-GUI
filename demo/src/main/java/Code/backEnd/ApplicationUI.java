@@ -221,17 +221,25 @@ public class ApplicationUI {
         
     }
 
-    private static void advisorLogin(String username, String password) {
+    public static Boolean advisorLogin(String username, String password) {
 
         User user = applicationFacade.loginUser(username, password);
         if (user != null && user.getType() == UserType.ADVISOR) {
             loggedIn = true;
             advisor = applicationFacade.loginAdvisor(user.getUuid());
             System.out.println("Login successful! You are logged in as " + UserType.getTypeString(user.getType()));
+            return true;
         } else {
             System.out.println("Login failed. Please check your credentials.");
+            return false;
         }
         
+    }
+
+    public Boolean SendMessage(String email, String message){
+        if(applicationFacade.SendMessage(email, message))
+            return true;
+        return false;
     }
 
     private static void createAccount() {
@@ -335,6 +343,10 @@ public class ApplicationUI {
 
     private static void displayRequirement(RequirementType type){
         applicationFacade.displayRequirement(type);
+    }
+
+    public Advisor getAdvisor(){
+        return advisor;
     }
 
 

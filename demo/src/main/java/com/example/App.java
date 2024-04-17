@@ -22,16 +22,15 @@ public class App extends Application {
         scene = new Scene(loadFXML("login"), 334, 588);
         stage.setScene(scene);
         stage.show();
-        /* 
+  
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
                 Code.backEnd.ApplicationUI.saveData();
-                Platform.exit();
-                System.exit(status:0);
+                System.exit(0);
             }
         });
-        */
+
     }
 
     static void setRoot(String fxml) throws IOException {

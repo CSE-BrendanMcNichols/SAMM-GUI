@@ -87,6 +87,16 @@ public class ApplicationFacade {
         return student;
     }
 
+    public Boolean SendMessage(String email, String message){
+        if(userList.findStudentByEmail(email)){
+            Student student = userList.getStudentByEmail(email);
+            student.addNotes(message);
+            DataWriter.saveStudents(UserList.getInstance().getStudents());
+            return true;
+        }
+        return false;
+    }
+
     public Advisor loginAdvisor(UUID uuid) {
         Advisor advisor = userList.getAdvisor(uuid);
         //System.out.println("Login user " + user);

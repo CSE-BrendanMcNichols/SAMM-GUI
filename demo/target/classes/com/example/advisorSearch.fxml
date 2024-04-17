@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Avatar?>
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import java.net.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <Avatar id="AdvisePhoto" BorderPane.alignment="CENTER" />
-   </top>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
                <children>
                   <Label text="Name" textAlignment="CENTER" />
-                  <Label text="Information" />
+                  <Label text="Search For Students" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0">
                      <children>
                         <Line endX="100.0" layoutX="168.0" startX="-100.0" />
@@ -33,19 +28,22 @@
             </VBox>
             <HBox prefHeight="38.0" prefWidth="334.0">
                <children>
-                  <TextField fx:id="AdvisorStudentSearchText" prefHeight="67.0" prefWidth="249.0">
-                     <padding>
-                        <Insets left="5.0" right="5.0" />
-                     </padding>
-                  </TextField>
-                  <Button fx:id="AdvisorStudentSearch" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" text="Search">
+                  <Button fx:id="SearchButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Search">
                      <padding>
                         <Insets right="10.0" />
                      </padding>
                   </Button>
+                  <TextField fx:id="SearchBar" prefHeight="36.0" prefWidth="239.0" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextField>
                </children>
             </HBox>
-            <VBox fx:id="SearchResultsVBox" prefHeight="200.0" prefWidth="305.0">
+            <VBox fx:id="SearchResultsVBox" prefHeight="455.0" prefWidth="334.0">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
@@ -54,7 +52,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="Logout" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />

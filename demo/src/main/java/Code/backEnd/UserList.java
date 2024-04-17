@@ -241,6 +241,24 @@ public class UserList {
         return null;
     }
 
+    public Boolean findStudentByEmail(String email) {
+        for (Student student : students) {
+            if (student.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Student getStudentByEmail(String email) {
+        for (Student student : students) {
+            if (student.getEmail().equals(email)) {
+                return student;
+            }
+        }
+        return null;
+    }
+
     public Boolean findAdvisor(UUID uuid) {
         for (Advisor advisor : advisors) {
             if (advisor.getUuid().equals(uuid)) {

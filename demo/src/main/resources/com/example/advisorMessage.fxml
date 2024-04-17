@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Avatar?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
-<?import java.net.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <Avatar id="AdvisePhoto" BorderPane.alignment="CENTER" />
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advisorMessageController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,15 +28,18 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <VBox fx:id="SearchResultsVBox" prefHeight="289.0" prefWidth="334.0">
+            <VBox fx:id="SearchResultsVBox" prefHeight="157.0" prefWidth="334.0">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="334.0">
                <children>
-                  <Label text="Send  A Message" />
-                  <TextField alignment="TOP_CENTER" prefHeight="25.0" prefWidth="264.0" promptText="Enter Email Address Here">
+                  <Label fx:id="Instructions" text="Send  A Message">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding></Label>
+                  <TextField fx:id="email" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="264.0" promptText="Enter Email Address Here" style="-fx-background-color: white;">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -46,25 +47,36 @@
                         <Insets left="25.0" right="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Enter Your Message Here">
+                  <TextArea fx:id="message" prefHeight="200.0" prefWidth="200.0" promptText="Enter Your Message Here">
                      <VBox.margin>
                         <Insets left="25.0" right="25.0" top="25.0" />
                      </VBox.margin>
                   </TextArea>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button fx:id="Back" mnemonicParsing="false" onAction="#Back" text="Back" />
+                        <Button fx:id="SendMessage" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sendMessage" text="Send Message" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
-            <Button mnemonicParsing="false" text="Send Message">
-               <VBox.margin>
-                  <Insets bottom="25.0" top="25.0" />
-               </VBox.margin>
-            </Button>
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" prefHeight="37.0" prefWidth="103.0" text="Logout" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="5.0" />
+         </padding></Button>
    </bottom>
    <stylesheets>
      <URL value="@style.css" />
    </stylesheets>
+   <top>
+      <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@demo/src/main/java/Code/Images/Test.png" />
+         </image>
+      </ImageView>
+   </top>
 </BorderPane>

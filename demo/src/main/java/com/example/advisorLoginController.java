@@ -37,9 +37,11 @@ public class advisorLoginController {
 
         ApplicationUI applicationUI = ApplicationUI.getInstance();
         
-        applicationUI.TEST();
+        if(applicationUI.advisorLogin(username,password)){
+            App.setRoot("advisorHome");
+        } else {
+            signinText.setText("Invalid Login");
+        }
 
-        System.out.println("Username: " + username);
-        System.out.println("Password: " + password);
     }
 }
