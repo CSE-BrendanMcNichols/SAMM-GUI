@@ -9,17 +9,23 @@ import java.util.UUID;
 import org.json.simple.JSONObject;
 
 public class ApplicationUI {
-    private static ApplicationFacade applicationFacade;
+    private static ApplicationFacade applicationFacade = ApplicationFacade.getInstance();
     private static boolean loggedIn = false;
     private static Scanner scanner = new Scanner(System.in);
+    private static ApplicationUI applicationUI;
+    private static User user = null;
+    private static Student student = null;
+    private static Advisor advisor = null;
+    private static ApplicationArea applicationArea = null;
 
     public static void main(String[] args) {
+        /*
         applicationFacade = ApplicationFacade.getInstance();
         User user = null;
         Student student = null;
         Advisor advisor = null;
         ApplicationArea applicationArea = null;
-
+        
         while (true) {
             System.out.println("\nWelcome to the Application\n");
             System.out.println("1. Login");
@@ -107,11 +113,19 @@ public class ApplicationUI {
             
    
         }
+        */
 
     }
 
 
-    private static void saveData() {
+    public static ApplicationUI getInstance() {
+        if (applicationUI == null) {
+            applicationUI = new ApplicationUI();
+        }
+        return applicationUI;
+    }
+
+    public static void saveData() {
         System.out.print("Saving Information...");
         DataWriter.saveCourses(CourseList.getInstance().getCourses());
         DataWriter.saveAdvisors(UserList.getInstance().getAdvisors());
@@ -120,6 +134,9 @@ public class ApplicationUI {
         System.out.print("Your are successfully logged out! Good Bye!");
     }
 
+    public static void TEST(){
+        System.out.println("TEST");
+    }
 
     private static void checkProgress(User student){
         //Student.checkProgress(student);
@@ -201,6 +218,19 @@ public class ApplicationUI {
             System.out.println("Login failed. Please check your credentials.");
         }
         return null;
+        
+    }
+
+    private static void advisorLogin(String username, String password) {
+
+        User user = applicationFacade.loginUser(username, password);
+        if (user != null && user.getType() == UserType.ADVISOR) {
+            loggedIn = true;
+            advisor = applicationFacade.loginAdvisor(user.getUuid());
+            System.out.println("Login successful! You are logged in as " + UserType.getTypeString(user.getType()));
+        } else {
+            System.out.println("Login failed. Please check your credentials.");
+        }
         
     }
 

@@ -1,9 +1,10 @@
 package com.example;
 
-import com.gluonhq.charm.glisten.mvc.View;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import java.io.IOException;
 
 public class loginController {
 
@@ -14,7 +15,7 @@ public class loginController {
     private Button advisorLoginButton;
 
     @FXML
-    private View signinBackground;
+    private BorderPane signinBackground;
 
     @FXML
     private Label signinText;
@@ -28,4 +29,8 @@ public class loginController {
     @FXML
     private Button studentLoginButton;
 
+    @FXML
+    private void switchToAdvisor() throws IOException {
+        App.setRoot("advisorLogin");
+    }
 }

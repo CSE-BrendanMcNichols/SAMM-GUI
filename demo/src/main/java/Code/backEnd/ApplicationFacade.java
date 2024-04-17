@@ -87,6 +87,12 @@ public class ApplicationFacade {
         return student;
     }
 
+    public Advisor loginAdvisor(UUID uuid) {
+        Advisor advisor = userList.getAdvisor(uuid);
+        //System.out.println("Login user " + user);
+        return advisor;
+    }
+
     public void displayRequirement(RequirementType type){
        CourseRequirement requirement = Cache.getInstance().getRequirementByType(type);
        requirement.displayRequirement(requirement);
