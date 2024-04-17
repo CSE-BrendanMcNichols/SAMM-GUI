@@ -13,13 +13,12 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import java.net.*?>
 
 <BorderPane fx:id="signinBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
    <top>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../../../../../../uofsc%20logo.png" />
+            <Image url="@../../../java/Code/Images/uofsclogo.png" />
          </image>
       </ImageView>
    </top>
@@ -50,7 +49,7 @@
                   </Pane>
                </children>
             </VBox>
-            <Button fx:id="advisorLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" onAction="#switchToAdvisor"/>
+            <Button fx:id="advisorLoginButton" mnemonicParsing="false" onAction="#switchToAdvisor" prefHeight="45.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" />
             <AnchorPane prefHeight="30.0" prefWidth="200.0" />
             <Button fx:id="adminsitratorLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Administrator" textAlignment="CENTER" />
             <AnchorPane prefHeight="25.0" prefWidth="200.0" />
