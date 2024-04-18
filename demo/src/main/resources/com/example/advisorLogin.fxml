@@ -34,7 +34,7 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" stroke="BLACK" strokeType="INSIDE" width="334.0" />
                         <HBox alignment="TOP_CENTER" layoutY="19.0" prefHeight="81.0" prefWidth="334.0">
                            <children>
-                              <Label fx:id="signinWelcome" alignment="TOP_CENTER" text="Welcome!">
+                              <Label fx:id="signinWelcome" alignment="TOP_CENTER" text="Welcome Advisor!">
                                  <font>
                                     <Font size="24.0" />
                                  </font>

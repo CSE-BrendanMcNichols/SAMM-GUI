@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,11 +15,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="signinBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advisorLoginController">
    <top>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../../java/Code/Images/uofsclogo.png" />
+            <Image url="@../../../java/Code/Images/uofsc%20logo.png" />
          </image>
       </ImageView>
    </top>
@@ -30,10 +31,10 @@
                <children>
                   <Pane prefHeight="130.0" prefWidth="334.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" stroke="BLACK" strokeType="INSIDE" width="337.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" stroke="BLACK" strokeType="INSIDE" width="334.0" />
                         <HBox alignment="TOP_CENTER" layoutY="19.0" prefHeight="81.0" prefWidth="334.0">
                            <children>
-                              <Label fx:id="signinWelcome" alignment="TOP_CENTER" text="Welcome!">
+                              <Label fx:id="signinWelcome" alignment="TOP_CENTER" text="Welcome Student!">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -42,17 +43,22 @@
                         </HBox>
                         <HBox alignment="BOTTOM_CENTER" prefHeight="72.0" prefWidth="334.0">
                            <children>
-                              <Label fx:id="signinText" alignment="BOTTOM_CENTER" text="Are you an advisor, administrator, or a student?" />
+                              <Label fx:id="signinText" alignment="BOTTOM_CENTER" text="Please Log in or Sign up" />
                            </children>
                         </HBox>
                      </children>
                   </Pane>
                </children>
             </VBox>
-            <Button fx:id="advisorLoginButton" mnemonicParsing="false" onAction="#switchToAdvisor" prefHeight="45.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" />
-            <AnchorPane prefHeight="20.0" prefWidth="200.0" />
-            <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Student" textAlignment="CENTER" />
-            <AnchorPane prefHeight="150.0" prefWidth="200.0">
+            <AnchorPane prefHeight="30.0" prefWidth="334.0" />
+            <TextField fx:id="usernameField" alignment="CENTER" promptText="Please Enter Username" />
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" />
+            <TextField fx:id="passwordField" alignment="CENTER" promptText="Please Enter Password" />
+            <AnchorPane prefHeight="25.0" prefWidth="200.0" />
+            <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="&lt; Go Back" textAlignment="CENTER" />
+            <AnchorPane prefHeight="25.0" prefWidth="200.0" />
+            <Button fx:id="studentLoginButton1" mnemonicParsing="false" onAction="#loginAdvisor" prefHeight="50.0" prefWidth="220.0" text="Login" textAlignment="CENTER" />
+            <AnchorPane minHeight="130.0" prefHeight="105.0" prefWidth="334.0">
                <children>
                   <Button fx:id="signupButton" layoutX="247.0" layoutY="111.0" mnemonicParsing="false" text="Sign Up" />
                   <Text layoutX="27.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have an account? Click here to" />
