@@ -108,6 +108,45 @@ public class ApplicationFacade {
        requirement.displayRequirement(requirement);
     }
 
+    public ArrayList<Student> getStudents(String fName, String lName){
+        ArrayList<Student> students = new ArrayList<Student>();
+
+        for(Student student : userList.getStudents()){
+            if(student.getFirstName().toLowerCase().contains(fName.toLowerCase()) && student.getLastName().toLowerCase().contains(lName.toLowerCase())){
+                students.add(student);
+            }
+        }
+
+        return students;
+    }
+
+    public ArrayList<Student> getStudents(String name){
+        ArrayList<Student> students = new ArrayList<Student>();
+
+        for(Student student : userList.getStudents()){
+            if(student.getFirstName().toLowerCase().contains(name.toLowerCase()) || student.getLastName().toLowerCase().contains(name.toLowerCase())){
+                students.add(student);
+            }
+        }
+
+        return students;
+    }
+
+    public Student findStudent(String fName, String lName) {
+        for(Student student: userList.getStudents()){
+            //System.out.println("Check" + student.getFirstName());
+            //System.out.println("is it" + fName);
+            //System.out.println("Check" + student.getLastName());
+            //System.out.println("is it" + lName);
+            if(student.getFirstName().equalsIgnoreCase(fName) && student.getLastName().equalsIgnoreCase(lName)){
+                //System.out.println("Found" + fName);
+                return student;
+            }
+        }
+        //System.out.println("Cant Find" + fName);
+        return null;
+    }
+
     /* 
     public void accessUserActions() {
         // make a boolean that is quit and in the logout case you set quit to true;

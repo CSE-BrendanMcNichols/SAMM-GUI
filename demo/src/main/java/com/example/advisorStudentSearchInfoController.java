@@ -1,18 +1,19 @@
 package com.example;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import Code.backEnd.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class advisorStudentInfoController {
+public class advisorStudentSearchInfoController {
 
     @FXML
     private Label ApplicationArea;
+
+    @FXML
+    private Button Assign;
 
     @FXML
     private Button Back;
@@ -59,7 +60,15 @@ public class advisorStudentInfoController {
 
     @FXML
     private void Back() throws IOException {
-        App.setRoot("advisorStudents");
+        App.setRoot("advisorSearch");
+    }
+
+    @FXML
+    private void Assign() throws IOException {
+        ApplicationUI applicationUI = ApplicationUI.getInstance();
+
+        applicationUI.getAdvisor().assignStudent(applicationUI.getSelectedStudent());
+
     }
 
 }

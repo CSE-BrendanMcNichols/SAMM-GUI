@@ -6,36 +6,62 @@ import Code.backEnd.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
 
 
-public class advisorStudentsController {
+public class advisorSearchController {
+
+    @FXML
+    private Button Back;
 
     @FXML
     private Button Logout;
 
     @FXML
-    private Label Student;
+    private Label Name;
+
+    @FXML
+    private TextField SearchBar;
+
+    @FXML
+    private Button SearchButton;
 
     @FXML
     private VBox SearchResultsVBox;
 
     @FXML
-    private Label Name;
-
-    @FXML
     private void initialize() {
         ApplicationUI applicationUI = ApplicationUI.getInstance();
 
+        Name.setText(applicationUI.getAdvisor().getFirstName() + " " + applicationUI.getAdvisor().getLastName());
+
+    }
+
+    @FXML
+    private void search() {
+        String text = SearchBar.getText();
+
+        ApplicationUI applicationUI = ApplicationUI.getInstance();
+
+        String[] names = text.split(" ");
+        String fName = names[0];
+        String lName = "";
+        Boolean oneName = true;
+        if (names.length > 1) {
+            lName = names[1];
+            oneName = false;
+        }
+        
         ArrayList<Student> students = new ArrayList<Student>();
+        if(oneName == false){
+            students = applicationUI.getStudents(fName, lName);
+        } else {
+            students = applicationUI.getStudents(fName);
+        }
 
-        students = applicationUI.getAdvisor().getAssignedStudents();
-
-        Name.setText(applicationUI.getAdvisor().getFirstName() + " " + applicationUI.getAdvisor().getLastName() + "'s");
-
-
-        //System.out.println("Initialized");
+        SearchResultsVBox.getChildren().clear();
 
         for (Student student : students) {
             Label studentLabel = new Label();
@@ -68,15 +94,9 @@ public class advisorStudentsController {
         int lastNameStartIndex = firstNameEndIndex + 1;
         int newlineIndex = labelText.indexOf("\n");
         String lastName = labelText.substring(lastNameStartIndex, newlineIndex);
-        applicationUI.setSelectedStudent(applicationUI.getAdvisor().findStudent(firstName, lastName));
+        applicationUI.setSelectedStudent(applicationUI.findStudent(firstName, lastName));
 
-
-        App.setRoot("advisorStudentInfo");
-    }
-
-    @FXML
-    private void Back() throws IOException {
-        App.setRoot("advisorHome");
+        App.setRoot("advisorStudentSearchInfo");
     }
 
     @FXML
@@ -85,5 +105,9 @@ public class advisorStudentsController {
         App.setRoot("login");
     }
 
+    @FXML
+    private void Back() throws IOException {
+        App.setRoot("advisorHome");
+    }
 
 }

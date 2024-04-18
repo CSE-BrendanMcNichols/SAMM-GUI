@@ -375,4 +375,19 @@ public class ApplicationUI {
         return selectedStudent;
     }
 
+    public ArrayList<Student> getStudents(String fName, String lName){
+        ArrayList<Student> students = applicationFacade.getStudents(fName,lName);
+        return students;
+    }
+
+    public Student findStudent(String fName, String lName){
+        return applicationFacade.findStudent(fName, lName);
+    }
+
+    public ArrayList<Student> getStudents(String name){
+        ArrayList<Student> students = applicationFacade.getStudents(name);
+        return students;
+    }
+
+
 }

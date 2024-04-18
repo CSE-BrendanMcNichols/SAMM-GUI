@@ -33,6 +33,11 @@ public class advisorHomeController {
     }
 
     @FXML
+    private void switchToSearch() throws IOException {
+        App.setRoot("advisorSearch");
+    }
+
+    @FXML
     private void switchToMessage() throws IOException {
         App.setRoot("advisorMessage");
     }

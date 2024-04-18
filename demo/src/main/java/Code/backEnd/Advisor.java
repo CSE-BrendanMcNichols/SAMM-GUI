@@ -273,12 +273,16 @@ public class Advisor extends User {
 
     public Student findStudent(String fName, String lName) {
         for(Student student: assignedStudents){
+            //System.out.println("Check" + student.getFirstName());
+            //System.out.println("is it" + fName);
+            //System.out.println("Check" + student.getLastName());
+            //System.out.println("is it" + lName);
             if(student.getFirstName().equalsIgnoreCase(fName) && student.getLastName().equalsIgnoreCase(lName)){
-                System.out.println("Found" + fName);
+                //System.out.println("Found" + fName);
                 return student;
             }
         }
-        System.out.println("Cant Find" + fName);
+        //System.out.println("Cant Find" + fName);
         return null;
     }
 

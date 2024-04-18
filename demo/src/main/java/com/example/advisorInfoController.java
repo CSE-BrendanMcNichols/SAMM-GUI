@@ -32,7 +32,7 @@ public class advisorInfoController {
 
         Department.setText(Department.getText() + " " + applicationUI.getAdvisor().getDepartment());
         Role.setText(Role.getText() + " Advisor");
-        Name.setText(applicationUI.getAdvisor().getFirstName() + " " + applicationUI.getAdvisor().getLastName());
+        Name.setText(applicationUI.getAdvisor().getFirstName() + " " + applicationUI.getAdvisor().getLastName() + "'s");
         Student.setText(Student.getText() + " " + applicationUI.getAdvisor().getAssignedStudents().size());
     }
 
