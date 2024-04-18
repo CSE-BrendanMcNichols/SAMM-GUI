@@ -50,9 +50,7 @@
                </children>
             </VBox>
             <Button fx:id="advisorLoginButton" mnemonicParsing="false" onAction="#switchToAdvisor" prefHeight="45.0" prefWidth="220.0" text="Advisor" textAlignment="CENTER" />
-            <AnchorPane prefHeight="30.0" prefWidth="200.0" />
-            <Button fx:id="adminsitratorLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Administrator" textAlignment="CENTER" />
-            <AnchorPane prefHeight="25.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="20.0" prefWidth="200.0" />
             <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Student" textAlignment="CENTER" />
             <AnchorPane prefHeight="150.0" prefWidth="200.0">
                <children>
