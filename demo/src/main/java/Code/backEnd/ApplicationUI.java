@@ -15,6 +15,7 @@ public class ApplicationUI {
     private static ApplicationUI applicationUI;
     private static User user = null;
     private static Student student = null;
+    private static Student selectedStudent = null;
     private static Advisor advisor = null;
     private static ApplicationArea applicationArea = null;
 
@@ -187,6 +188,10 @@ public class ApplicationUI {
         Student.generateSemesterPlan(student);
     }
 
+    public static void setSelectedStudent(Student tempStudent){
+        selectedStudent = tempStudent;
+    }
+
     private static void applicationArea(User user) {
         System.out.println("Possible Application Areas: ");
         System.out.println("\n Science \n Math \n Digital Design \n Robotics \n Speech \n");
@@ -222,6 +227,23 @@ public class ApplicationUI {
     }
 
     public static Boolean advisorLogin(String username, String password) {
+
+        User user = applicationFacade.loginUser(username, password);
+        if (user != null && user.getType() == UserType.ADVISOR) {
+            loggedIn = true;
+            advisor = applicationFacade.loginAdvisor(user.getUuid());
+            System.out.println("Login successful! You are logged in as " + UserType.getTypeString(user.getType()));
+            return true;
+        } else {
+            System.out.println("Login failed. Please check your credentials.");
+            return false;
+        }
+        
+    }
+
+
+
+    public static Boolean retrieveStudent(String username, String password) {
 
         User user = applicationFacade.loginUser(username, password);
         if (user != null && user.getType() == UserType.ADVISOR) {
@@ -349,5 +371,8 @@ public class ApplicationUI {
         return advisor;
     }
 
+    public Student getSelectedStudent(){
+        return selectedStudent;
+    }
 
 }

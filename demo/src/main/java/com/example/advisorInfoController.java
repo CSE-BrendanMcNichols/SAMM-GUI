@@ -24,11 +24,15 @@ public class advisorInfoController {
     private Label Student;
 
     @FXML
+    private Label Name;
+
+    @FXML
     private void initialize() {
         ApplicationUI applicationUI = ApplicationUI.getInstance();
 
         Department.setText(Department.getText() + " " + applicationUI.getAdvisor().getDepartment());
         Role.setText(Role.getText() + " Advisor");
+        Name.setText(applicationUI.getAdvisor().getFirstName() + " " + applicationUI.getAdvisor().getLastName());
         Student.setText(Student.getText() + " " + applicationUI.getAdvisor().getAssignedStudents().size());
     }
 

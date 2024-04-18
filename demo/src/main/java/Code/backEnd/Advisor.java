@@ -271,6 +271,17 @@ public class Advisor extends User {
         return null;
     }
 
+    public Student findStudent(String fName, String lName) {
+        for(Student student: assignedStudents){
+            if(student.getFirstName().equalsIgnoreCase(fName) && student.getLastName().equalsIgnoreCase(lName)){
+                System.out.println("Found" + fName);
+                return student;
+            }
+        }
+        System.out.println("Cant Find" + fName);
+        return null;
+    }
+
     /**
      * Returns the matching student
      * Helper method

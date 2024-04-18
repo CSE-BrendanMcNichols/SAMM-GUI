@@ -26,7 +26,7 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <VBox fx:id="SearchResultsVBox" prefHeight="455.0" prefWidth="334.0">
+            <VBox fx:id="SearchResultsVBox" alignment="TOP_CENTER" prefHeight="455.0" prefWidth="334.0">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>

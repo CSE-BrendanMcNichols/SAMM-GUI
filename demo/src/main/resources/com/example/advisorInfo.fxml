@@ -17,7 +17,7 @@
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
                <children>
-                  <Label text="Name" textAlignment="CENTER" />
+                  <Label fx:id="Name" text="Name" textAlignment="CENTER" />
                   <Label text="Information" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0">
                      <children>
