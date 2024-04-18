@@ -3,11 +3,11 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import java.net.*?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advisorHomeController">
    <center>
@@ -18,9 +18,9 @@
             <AnchorPane prefHeight="42.0" prefWidth="334.0" />
             <Button fx:id="InfoButton" mnemonicParsing="false" onAction="#switchToInfo" text="View Your Information" />
             <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="StudentsButton" mnemonicParsing="false" text="View Your Students" onAction="#switchToStudent"/>
+            <Button fx:id="StudentsButton" mnemonicParsing="false" onAction="#switchToStudent" text="View Your Students" />
             <AnchorPane layoutX="10.0" layoutY="46.0" prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="MessageButton" mnemonicParsing="false" text="View Or Send A Message" onAction="#switchToMessage"/>
+            <Button fx:id="MessageButton" mnemonicParsing="false" onAction="#switchToMessage" text="View Or Send A Message" />
             <AnchorPane layoutX="10.0" layoutY="46.0" prefHeight="42.0" prefWidth="334.0" />
             <Button fx:id="SearchButton" mnemonicParsing="false" text="Search For Students" />
          </children>
@@ -32,4 +32,11 @@
    <bottom>
       <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
+   <top>
+      <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@Images/Test.png" />
+         </image>
+      </ImageView>
+   </top>
 </BorderPane>

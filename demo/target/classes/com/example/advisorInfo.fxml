@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -36,14 +38,21 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
-            <Button fx:id="Back" mnemonicParsing="false" text="Back" onAction="#Back"/>
+            <Button fx:id="Back" mnemonicParsing="false" onAction="#Back" text="Back" />
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="37.0" prefWidth="83.0" text="Logout" BorderPane.alignment="CENTER" onAction="#Logout"/>
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" onAction="#Logout" prefHeight="37.0" prefWidth="83.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />
    </stylesheets>
+   <top>
+      <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@Images/Test.png" />
+         </image>
+      </ImageView>
+   </top>
 </BorderPane>
