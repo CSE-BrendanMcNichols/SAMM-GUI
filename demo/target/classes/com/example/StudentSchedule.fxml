@@ -40,7 +40,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" opacity="0.59" prefHeight="38.0" prefWidth="173.0" text="&lt; Go Back To Main Page" translateY="-50.0" BorderPane.alignment="CENTER" />
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" style="-fx-border-color: orange; -fx-background-color: 79200D; -fx-text-fill: white;" text="&lt; Go Back To Main Page" textFill="#1e21c7" translateY="-50.0" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@SAMM-GUI/demo/target/classes/com/example/style.css" />
