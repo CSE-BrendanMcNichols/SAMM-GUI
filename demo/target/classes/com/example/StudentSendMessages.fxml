@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0">
+                     <children>
+                        <Line endX="100.0" layoutX="168.0" startX="-100.0" />
+                        <Avatar layoutX="284.0" layoutY="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label text="Your Messages">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Inbox" translateX="-100.0" translateY="40.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="93.0" prefWidth="242.0" style="-fx-background-color: white;" translateY="45.0">
+               <children>
+                  <ScrollBar layoutX="236.0" orientation="VERTICAL" prefHeight="94.0" prefWidth="12.0" />
+                  <TextFlow prefHeight="94.0" prefWidth="238.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="◇ person name: Is your resistration ...&#10;◆ person name 2: Remember to fill ...&#10;◇ person name 3: Office Hours for ...&#10;◇ person name 4: Welcome to your ...&#10;◆ person name 5: I will be your instr ...&#10;◇ person name 6: Reminder you still ..." />
+                     </children>
+                  </TextFlow>
+               </children>
+            </Pane>
+            <Label text="📨 Send A Message" translateX="-60.0" translateY="75.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="28.0" prefWidth="250.0" promptText="Enter the recievers email" style="-fx-background-color: White;" translateY="85.0" />
+            <TextField alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="103.0" prefWidth="250.0" promptText="Enter your message" style="-fx-background-color: White;" translateY="100.0" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: white;" text="Send" translateX="-84.0" translateY="105.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" style="-fx-border-color: orange; -fx-background-color: 79200D; -fx-text-fill: white;" text="&lt; Go Back To Main Page" textFill="#1e21c7" translateY="-50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <stylesheets>
+     <URL value="@SAMM-GUI/demo/target/classes/com/example/style.css" />
+   </stylesheets>
+</BorderPane>
