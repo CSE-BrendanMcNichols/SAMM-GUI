@@ -18,6 +18,9 @@ public class advisorStudentInfoController {
     private Button Back;
 
     @FXML
+    private Button Unassign;
+
+    @FXML
     private Label CurrentClasses;
 
     @FXML
@@ -60,6 +63,12 @@ public class advisorStudentInfoController {
     @FXML
     private void Back() throws IOException {
         App.setRoot("advisorStudents");
+    }
+
+    @FXML
+    private void Unassign() {
+        ApplicationUI applicationUI = ApplicationUI.getInstance();
+        applicationUI.getAdvisor().unAssignStudent(applicationUI.getSelectedStudent());
     }
 
 }

@@ -19,7 +19,7 @@
             <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
                <children>
                   <Label fx:id="Name" text="Name" textAlignment="CENTER" />
-                  <Label text="Your Students" />
+                  <Label text="Students" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0">
                      <children>
                         <Line endX="100.0" layoutX="168.0" startX="-100.0" />

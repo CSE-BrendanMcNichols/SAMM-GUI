@@ -18,6 +18,8 @@ public class ApplicationUI {
     private static Student selectedStudent = null;
     private static Advisor advisor = null;
     private static ApplicationArea applicationArea = null;
+    private CourseList courseList = CourseList.getInstance();
+
 
     public static void main(String[] args) {
         /*
@@ -389,5 +391,11 @@ public class ApplicationUI {
         return students;
     }
 
+    public void createCourse(String name, String code, String number, String description, ArrayList<String> availible){
+        Course course = new Course(name, code, number, description, availible);
+        courseList.createCourse(course);
+    }
+
+    
 
 }

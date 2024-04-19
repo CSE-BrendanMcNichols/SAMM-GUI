@@ -22,7 +22,9 @@
             <AnchorPane layoutX="10.0" layoutY="46.0" prefHeight="42.0" prefWidth="334.0" />
             <Button fx:id="MessageButton" mnemonicParsing="false" onAction="#switchToMessage" text="View Or Send A Message" />
             <AnchorPane layoutX="10.0" layoutY="46.0" prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="SearchButton" mnemonicParsing="false" text="Search For Students" onAction="#switchToSearch" />
+            <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#switchToSearch" text="Search For Students" />
+            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+            <Button fx:id="CreateCourse" mnemonicParsing="false" onAction="#switchToCreateCourse" text="Create A Course" />
          </children>
       </VBox>
    </center>

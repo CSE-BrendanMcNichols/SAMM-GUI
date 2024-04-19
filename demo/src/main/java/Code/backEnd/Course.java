@@ -59,6 +59,26 @@ public class Course {
         this.uuid = uuid;
     }
 
+    public Course(String name, String code, String number, String description, ArrayList<String> availible){
+        this.courseName = name;
+        this.courseSubject = code;
+        this.courseNumber = number;
+        this.courseDescription = description;
+        this.courseAvailability = new ArrayList<Semester>();
+        if(availible.size() > 0){
+            for(String semester : availible){
+                this.courseAvailability.add(Semester.StringToSemester(semester));
+            }
+        } else {
+            this.courseAvailability.add(Semester.Fall);
+        }
+        this.uuid = UUID.randomUUID();
+        this.courseHours = 3;
+        this.prerequisites = new ArrayList<CourseRequirement>();
+        this.corequisites = new ArrayList<CourseRequirement>();
+
+    }
+
     public UUID getUuid() {
         return uuid;
     }

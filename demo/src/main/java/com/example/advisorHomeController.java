@@ -22,6 +22,9 @@ public class advisorHomeController {
     private Button SearchButton;
 
     @FXML
+    private Button CreateCourse;
+
+    @FXML
     private Button Logout;
 
     @FXML
@@ -30,6 +33,11 @@ public class advisorHomeController {
     @FXML
     private void switchToInfo() throws IOException {
         App.setRoot("advisorInfo");
+    }
+
+    @FXML
+    private void switchToCreateCourse() throws IOException {
+        App.setRoot("advisorCourseCreate");
     }
 
     @FXML
