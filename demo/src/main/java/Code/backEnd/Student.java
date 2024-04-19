@@ -26,7 +26,8 @@ public class Student extends User {
    
 
     private Year gradeYear = Year.Freshman;
-    private Advisor advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email", "Default Username", "Default Password", null, "Default Apartment");
+    private Advisor advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email",
+            "Default Username", "Default Password", null, "Default Apartment");
     private Major major = new Major("Default Major");
     private double overallGrade = 0.0;
     
@@ -85,7 +86,8 @@ public class Student extends User {
     public Student(){
         super(UserType.STUDENT);
         gradeYear = Year.Freshman;
-        advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email", "Default Username", "Default Password", null, "Default Apartment");
+        advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email",
+                "Default Username", "Default Password", null, "Default Apartment");
         major = new Major("Default Major");
         overallGrade = 0.0;
         credits = 0;
@@ -146,12 +148,6 @@ public class Student extends User {
     }
 
     // Added Getters and setters methods
-
-    public Student(String firstName, String lastName, String uscid, String email, String username, String password,
-            UserType student, Year freshman, Object object, Object object2, double d, int j, Object object3,
-            Object object4, Object object5) {
-        // TODO Auto-generated constructor stub
-    }
 
     public Year getGradeYear() {
         return gradeYear;

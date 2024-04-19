@@ -266,6 +266,55 @@ public class ApplicationUI {
         return false;
     }
 
+    public boolean createAdvisor(String firstName, String lastName,
+            String uscid, String email, String username, String password, String department) {
+
+        User user = applicationFacade.createAdvisor(firstName, lastName, uscid, email, username, password,
+                department);
+        if (user != null) {
+            System.out.println("Advisor successfully created. You can now login.");
+            DataWriter.saveAdvisors(UserList.getInstance().getAdvisors());
+            return true;
+        } else {
+            System.out.println("Advisor creation failed. User may already exist.");
+            return false;
+        }
+
+    }
+
+    public boolean createStudent(String firstName, String lastName,
+            String uscid, String email, String username, String password,
+            String majorName, String applicationArea, String year) {
+
+        User user = applicationFacade.createStudent(firstName, lastName, uscid, email, username, password,
+                majorName, applicationArea, year);
+        if (user != null) {
+            System.out.println("Student successfully created. You can now login.");
+            DataWriter.saveStudents(UserList.getInstance().getStudents());
+            return true;
+        } else {
+            System.out.println("Student creation failed. User may already exist.");
+            return false;
+        }
+
+    }
+
+    public boolean createAccount(String firstName, String lastName,
+            String uscid, String email, String username, String password, String department,
+            UserType userType) {
+
+        User user = applicationFacade.registerUser(userType, firstName, lastName, uscid, email, username, password,
+                department);
+        if (user != null) {
+            System.out.println("Account successfully created. You can now login.");
+            return true;
+        } else {
+            System.out.println("Account creation failed. User may already exist.");
+            return false;
+        }
+
+    }
+
     private static void createAccount() {
         System.out.println("Enter username for your account.");
         String username = scanner.nextLine();
@@ -292,7 +341,8 @@ public class ApplicationUI {
         System.out.println("Enter Department: ");
         String department = scanner.nextLine();
 
-        User user = applicationFacade.registerUser(userType, firstName, lastName, uscid, email, username, password,department);
+        User user = applicationFacade.registerUser(userType, firstName, lastName, uscid, email, username, password,
+                department);
         if (user != null) {
             System.out.println("Account successfully created. You can now login.");
         } else {

@@ -202,15 +202,17 @@ public class DataLoader extends DataConstants {
 				JSONObject studentJSON = (JSONObject) studentsJSON.get(i);
 				// System.out.println(studentJSON);
 				UUID studentUUID = UUID.fromString((String) studentJSON.get(UUIDSTRING));
-				UUID advisorUUID = UUID.fromString((String) studentJSON.get(ADVISOR));
-				Advisor advisor = null;
-				if (UserList.getInstance().findAdvisor(advisorUUID)) {
-					advisor = UserList.getInstance().getAdvisor(advisorUUID);
-				} else {
-					// System.out.println("Warning: While loading Advisor for Student record,
-					// Advisor Id: " + advisorUUID + " is not in the Advisor List.");
-				}
 
+
+				Advisor advisor = null;
+				String advisorUUIDString = (String)studentJSON.get(ADVISOR);
+				if (advisorUUIDString != null) {
+					UUID advisorUUID = UUID.fromString(advisorUUIDString);
+					if (UserList.getInstance().findAdvisor(advisorUUID)) {
+						advisor = UserList.getInstance().getAdvisor(advisorUUID);
+					}
+				}
+		
 				Student student = null;
 				if (UserList.getInstance().findStudent(studentUUID)) {
 					student = UserList.getInstance().getStudent(studentUUID);

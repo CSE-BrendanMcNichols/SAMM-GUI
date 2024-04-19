@@ -33,4 +33,14 @@ public class loginController {
     private void switchToAdvisor() throws IOException {
         App.setRoot("advisorLogin");
     }
+
+    @FXML
+    private void switchToSignupScreen() throws IOException {
+        App.setRoot("signup");
+    }
+
+    @FXML
+    private void Back() throws IOException {
+        App.setRoot("login");
+    }
 }

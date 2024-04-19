@@ -54,8 +54,10 @@
             <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" text="Student" textAlignment="CENTER" />
             <AnchorPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="signupButton" layoutX="247.0" layoutY="111.0" mnemonicParsing="false" text="Sign Up" />
-                  <Text layoutX="27.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have an account? Click here to" />
+                  <Button fx:id="signupButton" onAction="#switchToSignupScreen" layoutX="247.0"
+                     layoutY="111.0" mnemonicParsing="false" text="Sign Up" />
+                  <Text layoutX="27.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="Don't Have an account? Click here to" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="30.0" prefWidth="200.0" />

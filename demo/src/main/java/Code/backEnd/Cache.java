@@ -16,6 +16,8 @@ public class Cache {
 
     private static ArrayList<CourseRequirement> requirementList = new ArrayList<CourseRequirement>();
 
+    private UserInfo currentUser;
+
     public static Cache getInstance() {
         if (cacheInstance == null) {
             cacheInstance = new Cache();
@@ -150,6 +152,14 @@ public class Cache {
             }
         }
         return null;
+    }
+
+    public void setCurrentUser(UserInfo userInfo) {
+        this.currentUser = userInfo;
+    }
+
+    public UserInfo getCurrentUser() {
+        return this.currentUser;
     }
 
 }

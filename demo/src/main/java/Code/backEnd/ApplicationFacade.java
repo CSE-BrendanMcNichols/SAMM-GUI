@@ -35,30 +35,65 @@ public class ApplicationFacade {
         return applicationFacade;
     }
 
+    /**
+     * Create new advisor
+     * 
+     * @param firstName
+     * @param lastName
+     * @param uscid
+     * @param email
+     * @param username
+     * @param password
+     * @param department
+     * @return
+     */
+    public User createAdvisor(String firstName, String lastName, String uscid, String email,
+            String username, String password, String department) {
+        Advisor advisor = new Advisor(firstName, lastName, uscid, email, username, password, department);
+        userList.addAdvisor(advisor);
+        return advisor;
+    }
+
+    /** Collect user inputs and create Student object */
+    public User createStudent(String firstName, String lastName, String uscid, String email,
+            String username, String password, String majorName, String applicationArea, String year) {
+
+        Year gradeYear = Year.StringToYear(year);
+        Major major = MajorList.getInstance().getMajor(majorName);
+        ArrayList <String> notes = new ArrayList<String>();
+
+        Student student = new Student(firstName, lastName, uscid, email, username, password,
+                gradeYear, null, major, 0, 0, null,
+                null, notes, null, null, applicationArea);
+
+        userList.addStudent(student);
+        return student;
+    }
+
     public User registerUser(UserType type, String firstName, String lastName, String uscid, String email,
-            String username, String password,String department) {
-        
+            String username, String password, String department) {
+
         System.out.println("type:" + type);
         User user = null;
         switch (type) {
             case STUDENT:
-                Student student = new Student(firstName, lastName, uscid, email,  username, password, 
-                Year.Freshman, null, null, 0, 0, null, null, null,null,null,"");
+                Student student = new Student(firstName, lastName, uscid, email, username, password,
+                        Year.Freshman, null, null, 0, 0, null, null, null, null, null, "");
                 userList.addStudent(student);
                 user = student;
-                //DataWriter.saveStudents(userList.getStudents());
+                // DataWriter.saveStudents(userList.getStudents());
                 break;
             case ADVISOR:
-                Advisor advisor = new Advisor(firstName, lastName, uscid, email, username, password,department);
+                Advisor advisor = new Advisor(firstName, lastName, uscid, email, username, password, department);
                 userList.addAdvisor(advisor);
                 user = advisor;
-                //DataWriter.saveAdvisors(userList.getAdvisors());
+                // DataWriter.saveAdvisors(userList.getAdvisors());
                 break;
             case ADMINISTRATOR:
                 Administrator administrator = new Administrator(firstName, lastName, uscid, email, username, password);
                 userList.addAdministrator(administrator);
                 user = administrator;
-                //DataWriter.saveAdministrators(userList.getAdministrators());
+                // DataWriter.saveAdministrators(userList.getAdministrators());
                 break;
         }
         return user;
@@ -73,7 +108,7 @@ public class ApplicationFacade {
      */
     public User loginUser(String username, String password) {
         User user = userList.getUserByUsername(username);
-        //System.out.println("Login user " + user);
+        // System.out.println("Login user " + user);
 
         if (user != null && user.getPassword().equals(password)) {
             return user;
@@ -83,7 +118,7 @@ public class ApplicationFacade {
 
     public Student loginStudent(UUID uuid) {
         Student student = userList.getStudent(uuid);
-        //System.out.println("Login user " + user);
+        // System.out.println("Login user " + user);
         return student;
     }
 

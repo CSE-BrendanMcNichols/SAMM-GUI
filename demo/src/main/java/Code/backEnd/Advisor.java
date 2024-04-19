@@ -95,8 +95,11 @@ public class Advisor extends User {
         if (assignedStudents == null) {
             assignedStudents = new ArrayList<Student>();
         }
-        if (student != null)
+        // add if not assigned already
+        if (student != null && findAssignedStudent(student) == null) {
             this.assignedStudents.add(student);
+            student.setAdvisor(this);
+        }
     }
 
     /**
@@ -109,6 +112,7 @@ public class Advisor extends User {
         for (Student student : this.assignedStudents) {
             if (student.getUuid().equals(pStudent.getUuid())) {
                 this.assignedStudents.remove(student);
+                pStudent.setAdvisor(null);
                 unAssigned = true;
                 System.out.println(
                         "Unassigned the Student: " + pStudent.getUsername() + " from advisor" + this.getUsername());

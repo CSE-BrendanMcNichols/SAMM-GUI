@@ -46,6 +46,11 @@ public class DataWriter {
             if (student.getAdvisor() != null) {
                 studentJSON.put(DataConstants.ADVISOR, student.getAdvisor().getUuid().toString());
             }
+            else {
+                studentJSON.put(DataConstants.ADVISOR, null);
+            }
+
+            
 
             // Only store the Major Name
             // Todo. When reading from JSON file, it has to look up this id with the Major
@@ -84,6 +89,9 @@ public class DataWriter {
             studentJSON.put(DataConstants.NOTES, student.getNotes());
 
             studentsJSONArray.add(studentJSON);
+
+
+            System.out.println("\n\nstudentJSON\n" + studentJSON);
         }
 
         // Write JSON to file
@@ -321,7 +329,7 @@ public class DataWriter {
 
     private static String prettyPrint(JSONArray jsonArray) {
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
         return gson.toJson(jsonArray);
 
     }
