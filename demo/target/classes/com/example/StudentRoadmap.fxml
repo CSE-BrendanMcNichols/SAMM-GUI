@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0">
+                     <children>
+                        <Line endX="100.0" layoutX="168.0" startX="-100.0" />
+                        <Avatar layoutX="284.0" layoutY="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label text="View Your Roadmap">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label text="What would you like to see?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox prefWidth="150.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" style="-fx-border-color: orange; -fx-background-color: 79200D; -fx-text-fill: white;" text="&lt; Go Back To Main Page" textFill="#1e21c7" translateY="-50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <stylesheets>
+     <URL value="@SAMM-GUI/demo/target/classes/com/example/style.css" />
+   </stylesheets>
+</BorderPane>
