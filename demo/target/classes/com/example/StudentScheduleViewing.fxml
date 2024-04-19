@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="334.0">
+                     <children>
+                        <Line endX="100.0" layoutX="168.0" startX="-100.0" />
+                        <Avatar layoutX="284.0" layoutY="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label text="View Your Schedule">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label text="Choose a Semester:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox prefWidth="150.0" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="You are now viewing your {SEMESTER} schedule.">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Text>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="251.0" style="-fx-background-color: Black; -fx-border-color: White;" translateY="35.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="77.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{CLASS NAME}" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="83.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{TEACHER NAME}" textAlignment="CENTER" textOrigin="CENTER" translateY="-3.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="29.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{DAYS AND TIMES CLASS TAKES PLACE}" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="251.0" style="-fx-background-color: Black; -fx-border-color: White;" translateY="34.0">
+               <children>
+                  <Text fill="WHITE" layoutX="73.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{CLASS NAME2}" textAlignment="CENTER" textOrigin="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="80.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{TEACHER NAME2}" textAlignment="CENTER" textOrigin="CENTER" translateY="2.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{DAYS AND TIMES CLASS TAKES PLACE2}" textAlignment="CENTER" textOrigin="CENTER" translateY="4.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TextFlow maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="251.0" style="-fx-background-color: Black; -fx-border-color: White; -fx-text-alignment: Center;" textAlignment="CENTER" translateY="33.0">
+               <children>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="{CLASS NAME3}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="3.0" wrappingWidth="105.4375">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" text="{TEACHER NAME2}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="14.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" text="{DAYS AND TIMES CLASS TAKES PLACE3}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="24.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextFlow>
+            <TextFlow maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="251.0" style="-fx-background-color: Black; -fx-border-color: White; -fx-text-alignment: Center;" textAlignment="CENTER" translateY="32.0">
+               <children>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="{CLASS NAME4}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="3.0" wrappingWidth="105.4375">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" text="{TEACHER NAME4}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="14.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" strokeType="OUTSIDE" text="{DAYS AND TIMES CLASS TAKES PLACE4}&#10;" textAlignment="CENTER" textOrigin="CENTER" translateY="24.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" style="-fx-border-color: orange; -fx-background-color: 79200D; -fx-text-fill: white;" text="&lt; Go Back To Main Page" textFill="#1e21c7" translateY="-50.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <stylesheets>
+     <URL value="@SAMM-GUI/demo/target/classes/com/example/style.css" />
+   </stylesheets>
+</BorderPane>
