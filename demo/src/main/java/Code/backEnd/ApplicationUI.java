@@ -243,6 +243,21 @@ public class ApplicationUI {
         
     }
 
+    public static Boolean studentLogin(String username, String password) {
+
+        User user = applicationFacade.loginUser(username, password);
+        if (user != null && user.getType() == UserType.STUDENT) {
+            loggedIn = true;
+            student = applicationFacade.loginStudent(user.getUuid());
+            System.out.println("Login successful! You are logged in as " + UserType.getTypeString(user.getType()));
+            return true;
+        } else {
+            System.out.println("Login failed. Please check your credentials.");
+            return false;
+        }
+        
+    }
+
 
 
     public static Boolean retrieveStudent(String username, String password) {
