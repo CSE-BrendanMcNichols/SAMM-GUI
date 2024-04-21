@@ -438,6 +438,10 @@ public class ApplicationUI {
         return advisor;
     }
 
+    public Student getStudent(){
+        return student;
+    }
+
     public Student getSelectedStudent(){
         return selectedStudent;
     }
