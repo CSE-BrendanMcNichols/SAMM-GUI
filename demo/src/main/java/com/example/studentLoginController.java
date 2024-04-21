@@ -36,7 +36,8 @@ public class studentLoginController {
         String password = passwordField.getText();
 
         ApplicationUI applicationUI = ApplicationUI.getInstance();
-        
+        System.out.println(username+"Step1");
+        System.out.println(password+"Step1");
         if(applicationUI.studentLogin(username,password)){
             App.setRoot("studentHome");
         } else {

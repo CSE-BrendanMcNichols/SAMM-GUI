@@ -35,6 +35,11 @@ public class loginController {
     }
 
     @FXML
+    private void switchToStudent() throws IOException {
+        App.setRoot("studentLogin");
+    }
+
+    @FXML
     private void switchToSignupScreen() throws IOException {
         App.setRoot("signup");
     }

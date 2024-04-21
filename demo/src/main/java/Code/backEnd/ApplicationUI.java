@@ -244,7 +244,8 @@ public class ApplicationUI {
     }
 
     public static Boolean studentLogin(String username, String password) {
-
+        System.out.println(username);
+        System.out.println(password);
         User user = applicationFacade.loginUser(username, password);
         if (user != null && user.getType() == UserType.STUDENT) {
             loggedIn = true;
