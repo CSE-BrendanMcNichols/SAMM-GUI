@@ -36,7 +36,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="Logout" mnemonicParsing="false" onAction="#logout" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />
