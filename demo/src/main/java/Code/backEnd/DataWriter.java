@@ -139,6 +139,7 @@ public class DataWriter {
             advisorJSON.put(DataConstants.PASSWORD, advisor.getPassword());
             advisorJSON.put(DataConstants.EMAIL, advisor.getEmail());
             advisorJSON.put(DataConstants.USCID, advisor.getUscid());
+            advisorJSON.put(DataConstants.DEPARTMENT, advisor.getDepartment());
             advisorJSON.put(DataConstants.UUIDSTRING, advisor.getUuid().toString());
 
             // Convert the Student Objects to Student String arraylist and store

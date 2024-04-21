@@ -37,7 +37,7 @@
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
                   <Label fx:id="GPA" text="GPA: " />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label fx:id="CurrentClasses" text="Current Classes: " />
+                  <Label fx:id="CurrentClasses" text="Current Classes: " wrapText="true"/>
                </children>
                <padding>
                   <Insets left="20.0" right="20.0" />

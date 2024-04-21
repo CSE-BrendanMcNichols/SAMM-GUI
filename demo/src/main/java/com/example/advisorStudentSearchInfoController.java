@@ -46,7 +46,7 @@ public class advisorStudentSearchInfoController {
         GPA.setText(GPA.getText() + " " + applicationUI.getSelectedStudent().getOverallGrade());
         
         for (Course course : applicationUI.getSelectedStudent().getCurrentCourses()){
-            CurrentClasses.setText(CurrentClasses.getText() + " " + course.getCourseName());
+            CurrentClasses.setText(CurrentClasses.getText() + "\n" + course.getCourseName());
         }
 
         Name.setText(applicationUI.getSelectedStudent().getFirstName() + " " + applicationUI.getSelectedStudent().getLastName() + "'s");
