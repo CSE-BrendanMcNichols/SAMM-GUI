@@ -10,8 +10,7 @@
     "uscid": "HE12865",
     "uuid": "2c29e60d-c02e-450a-8ac1-0c65266cabac",
     "email": "MaryZiemba@email.sc.edu",
-    "username": "MaryZiemba",
-    "department":"Information Systems"
+    "username": "MaryZiemba"
   },
   {
     "firstName": "Osbert",
@@ -23,7 +22,6 @@
     "uscid": "8106523",
     "uuid": "8d04937c-2158-445c-8f0f-bd86de7fdaa4",
     "email": "osbertodden@gmail.com",
-    "username": "osbertodden",
-    "department":"Computer Science"
+    "username": "osbertodden"
   }
 ]

@@ -55,7 +55,7 @@
             <AnchorPane prefHeight="30.0" prefWidth="200.0" />
             <TextField fx:id="passwordField" alignment="CENTER" promptText="Please Enter Password" />
             <AnchorPane prefHeight="25.0" prefWidth="200.0" />
-            <Button fx:id="studentLoginButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="&lt; Go Back" textAlignment="CENTER" />
+            <Button fx:id="Back" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="&lt; Go Back" textAlignment="CENTER" onAction="#Back"/>
             <AnchorPane prefHeight="25.0" prefWidth="200.0" />
             <Button fx:id="studentLoginButton1" mnemonicParsing="false" onAction="#loginAdvisor" prefHeight="50.0" prefWidth="220.0" text="Login" textAlignment="CENTER" />
             <AnchorPane minHeight="130.0" prefHeight="105.0" prefWidth="334.0">

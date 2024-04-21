@@ -44,4 +44,9 @@ public class advisorLoginController {
         }
 
     }
+
+    @FXML
+    private void Back() throws IOException {
+        App.setRoot("login");
+    }
 }
