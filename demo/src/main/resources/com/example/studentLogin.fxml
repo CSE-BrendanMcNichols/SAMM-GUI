@@ -70,7 +70,8 @@
 
             
             <AnchorPane prefHeight="50.0" prefWidth="200.0" />
-            <Button fx:id="back" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="&lt;Back" textAlignment="CENTER" />
+            <Button fx:id="back" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="&lt; Back" textAlignment="CENTER" onAction="#Back"/>
+            
 
             <AnchorPane minHeight="130.0" prefHeight="105.0" prefWidth="334.0">
                <children>
