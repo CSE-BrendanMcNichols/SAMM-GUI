@@ -35,6 +35,9 @@ public class StudentCurrentClassesController {
         for (Course course : currentCourses) {
             coursesDisplay.append(course.displayCourse()+"\n");
         }
+        System.out.println("currentCourses: " + currentCourses);
+        System.out.println("coursesDisplay: " + coursesDisplay);
+
         currentClassesLabel.setText("Current Classes: \n------------------\n" + coursesDisplay.toString());
     }
 

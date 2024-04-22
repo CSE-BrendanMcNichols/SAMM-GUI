@@ -25,11 +25,11 @@
             <AnchorPane prefHeight="42.0" prefWidth="334.0" />
             <Button fx:id="ViewInfo" mnemonicParsing="false" onAction="#viewInfo" text="View Your Information" prefWidth="180.0"/>
             <AnchorPane prefHeight="25.0" prefWidth="334.0" />
-            <Button fx:id="ViewSchedule" mnemonicParsing="false" onAction="#viewSchedule" text="View Your Schedule" prefWidth="180.0"/>
+            <Button fx:id="ViewCurrentClasses" mnemonicParsing="false" onAction="#ViewCurrentClasses" text="View Current Classes" prefWidth="180.0"/>
             <AnchorPane prefHeight="25.0" prefWidth="334.0" />
-            <Button fx:id="ViewRoadmap" mnemonicParsing="false" onAction="#viewRoadmap" text="View Your Roadmap" prefWidth="180.0"/>
-            <AnchorPane prefHeight="25.0" prefWidth="334.0" />
-            <Button fx:id="TrackProgress" mnemonicParsing="false" onAction="#trackProgress" text="Track Your Progress" prefWidth="180.0"/>
+
+            <Button fx:id="ViewCompletedClasses" mnemonicParsing="false" onAction="#ViewCompletedClasses" text="View Completed Classes" prefWidth="180.0"/>
+
             <AnchorPane prefHeight="25.0" prefWidth="334.0" />
             <Button fx:id="ViewSendMessage" mnemonicParsing="false" onAction="#viewSendMessage" text="View Or Send A Message" prefWidth="180.0"/>
          </children>

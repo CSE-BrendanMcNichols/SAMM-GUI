@@ -22,8 +22,7 @@ public class StudentInfoController {
     private Label appAreaLabel;
     @FXML
     private Label gpaLabel;
-    @FXML
-    private Label currentClassesLabel;
+   
     @FXML
     private Button Back;
     @FXML
@@ -40,13 +39,7 @@ public class StudentInfoController {
         minorLabel.setText("Minor: N/A");
         appAreaLabel.setText("Application Area: " + currentStudent.getApplicationArea());
         gpaLabel.setText("GPA: " + String.format("%.2f", currentStudent.calculateGPA()));
-
-        ArrayList<Course> currentCourses = currentStudent.getCurrentCourses();
-        StringBuilder coursesDisplay = new StringBuilder();
-        for (Course course : currentCourses) {
-        coursesDisplay.append(course.displayCourse());
-        }
-        currentClassesLabel.setText("Current Classes: \n" + coursesDisplay.toString());
+        
     }
 
 
