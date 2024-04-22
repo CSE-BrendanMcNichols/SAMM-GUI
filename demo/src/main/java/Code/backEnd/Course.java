@@ -141,7 +141,7 @@ public class Course {
     }
 
     public String displayCourse() {
-        return "Course Number:" + courseNumber + " Course Name:" + courseName + " Subject: " + courseSubject + "\n";
+        return "Course Number: " + courseNumber + "\nCourse Name: " + courseName + "\nCourse Subject: " + courseSubject + "\n";
         // return courseName;
     }
 

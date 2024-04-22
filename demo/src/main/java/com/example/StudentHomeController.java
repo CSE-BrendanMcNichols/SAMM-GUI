@@ -35,6 +35,12 @@ public class StudentHomeController {
     }
 
     @FXML
+    private void ViewCurrentClasses() throws IOException {
+        App.setRoot("StudentCurrentClasses");
+    }
+
+
+    @FXML
     private void viewSchedule() throws IOException {
         App.setRoot("StudentScheduleViewing");
     }
