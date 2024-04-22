@@ -36,10 +36,10 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ChoiceBox prefWidth="150.0" />
+            <ChoiceBox fx:id="dropdown" prefWidth="150.0" />
             <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="314.0" prefWidth="200.0" translateY="35.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="186.0" />
+                <AnchorPane fx:id="scrollmenu" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="186.0" />
               </content>
             </ScrollPane>
          </children>
