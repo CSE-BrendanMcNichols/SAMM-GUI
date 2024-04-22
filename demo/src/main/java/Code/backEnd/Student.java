@@ -23,14 +23,13 @@ import java.util.UUID;
  * Added updateElectivesCompleted
  */
 public class Student extends User {
-   
 
     private Year gradeYear = Year.Freshman;
     private Advisor advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email",
             "Default Username", "Default Password", null, "Default Apartment");
     private Major major = new Major("Default Major");
     private double overallGrade = 0.0;
-    
+
     private int credits = 0;
     private HashMap<Course, String> completedCourses = new HashMap<Course, String>();
     private ArrayList<Course> currentCourses = new ArrayList<Course>();
@@ -40,7 +39,7 @@ public class Student extends User {
     private ArrayList<Elective> currentElectives = new ArrayList<Elective>();
     private ArrayList<Elective> completedElectives = new ArrayList<Elective>();
     private UUID uuid;
-    
+
     // Updated Constructor
     public Student(String firstName, String lastName, String uscid, String email, String username, String password,
             Year gradeYear, Advisor advisor, Major major, double overallGrade, int credits,
@@ -64,26 +63,22 @@ public class Student extends User {
         this.uuid = UUID.randomUUID();
         this.applicationArea = applicationArea;
 
-
-        if(getFirstName() == null){
+        if (getFirstName() == null) {
             this.setFirstName("Default First Name");
         }
-        if(getLastName() == null){
+        if (getLastName() == null) {
             this.setLastName("Default Last Name");
-    
+
         }
-        if(getUsername() == null){
+        if (getUsername() == null) {
             this.setUsername("Default Username");
         }
 
     }
 
-
-
-
-    //Default constructor
-    //By Matthew
-    public Student(){
+    // Default constructor
+    // By Matthew
+    public Student() {
         super(UserType.STUDENT);
         gradeYear = Year.Freshman;
         advisor = new Advisor("Default Advisor", "Default Constructor", "Default ID", "Default Email",
@@ -173,8 +168,6 @@ public class Student extends User {
         this.major = major;
     }
 
-    
-
     public void setOverallGrade(double overallGrade) {
         this.overallGrade = overallGrade;
     }
@@ -188,7 +181,7 @@ public class Student extends User {
     }
 
     public HashMap<Course, String> getCompletedCourses() {
-        
+
         return completedCourses;
     }
 
@@ -201,10 +194,11 @@ public class Student extends User {
     }
 
     public void setCurrentCourses(ArrayList<Course> currentCourses) {
-        
+
         this.currentCourses = currentCourses;
-        
+
     }
+
     public void setRemainingCourses(ArrayList<Course> remainingCourses) {
         this.remainingCourses = remainingCourses;
     }
@@ -238,7 +232,7 @@ public class Student extends User {
      */
 
     public void viewClassGrades() {
-        if(completedCourses.size() == 0) { 
+        if (completedCourses.size() == 0) {
             System.out.print("Error No Classes");
             return;
         }
@@ -250,15 +244,15 @@ public class Student extends User {
             String resultsubject = course.getCourseSubject();
             if (grade == null) {
                 resultgrade = "Error null is not a Grade";
-            } else if(grade.equals("null")){
+            } else if (grade.equals("null")) {
                 resultgrade = "Error null is not a Grade";
-            } else{
+            } else {
                 resultgrade = grade;
             }
 
-            if(resultsubject == null) {
+            if (resultsubject == null) {
                 resultsubject = "Error Course Subject is Null";
-            }else if(resultsubject.equals("null")){
+            } else if (resultsubject.equals("null")) {
                 resultsubject = "Error Course Subject is a string containing null";
             }
 
@@ -277,37 +271,36 @@ public class Student extends User {
         System.out.println("--------------------------");
         System.out.println("Current Courses:");
         for (Course course : currentCourses) {
-            if(course == null){
+            if (course == null) {
                 System.out.println("Error Null Class");
-            }else{
+            } else {
                 System.out.println(course.displayCourse());
             }
-            
+
         }
         System.out.println("Current Electives");
         for (Elective elective : this.currentElectives) {
-            if(elective == null){
+            if (elective == null) {
                 System.out.println("Error Null Elective");
-            }else{
+            } else {
                 System.out.println(elective.getName());
                 if (elective.getCourses() != null) {
                     for (Course course : elective.getCourses()) {
-                        if(course == null){
+                        if (course == null) {
                             System.out.println("Error Null Class");
-                        }else{
+                        } else {
                             System.out.println(course.displayCourse());
                         }
-                    
+
                     }
                 }
             }
-            
+
         }
         System.out.println("--------------------------");
 
         // System.out.println("End of Current Schedule");
     }
-
 
     private void updateGrade(Course course, char grade) {
         completedCourses.put(course, Character.toString(grade));
@@ -323,27 +316,28 @@ public class Student extends User {
             pointGrade = 2.0;
         } else if (grade == "D") {
             pointGrade = 1.0;
-        }else if (grade == "B+") {
+        } else if (grade == "B+") {
             pointGrade = 3.3;
-        }else if (grade == "B-") {
+        } else if (grade == "B-") {
             pointGrade = 2.7;
-        }else if (grade == "A+") {
+        } else if (grade == "A+") {
             pointGrade = 4.3;
-        }else if (grade == "A-") {
+        } else if (grade == "A-") {
             pointGrade = 3.7;
-        }else if (grade == "C+") {
+        } else if (grade == "C+") {
             pointGrade = 2.3;
-        }else if (grade == "C-") {
+        } else if (grade == "C-") {
             pointGrade = 1.7;
-        }else if (grade == "D+") {
+        } else if (grade == "D+") {
             pointGrade = 1.3;
-        }else if (grade == "D-") {
+        } else if (grade == "D-") {
             pointGrade = 0.7;
-        } else{
+        } else {
             pointGrade = 0.0;
         }
         return pointGrade;
     }
+
     /*
      * Calculate the students gpa
      * 
@@ -352,6 +346,7 @@ public class Student extends User {
     public double getOverallGrade() {
         return overallGrade;
     }
+
     public void updateOverallGrade() {
         double totalGrade = 0.0;
         int counter = 0;
@@ -361,19 +356,18 @@ public class Student extends User {
             totalGrade += toPointGrade(grade);
             counter = counter + 1;
         }
-        if(counter == 0){
+        if (counter == 0) {
             counter = 1;
         }
         overallGrade = totalGrade / counter;
         /*
-        if(credits == 0){
-            overallGrade = 0.0;
-        }else{
-            overallGrade = totalGrade / credits;
-        }
-        */
-        
-        
+         * if(credits == 0){
+         * overallGrade = 0.0;
+         * }else{
+         * overallGrade = totalGrade / credits;
+         * }
+         */
+
     }
     /*
      * Updates the students overall grade and prints it out
@@ -406,10 +400,10 @@ public class Student extends User {
     public void updateCourseCompleted(Course updateCourse, String courseGrade) {
         // System.out.println("updateCourseCompleted called. updateCourse: " +
         // updateCourse);
-        if(updateCourse == null){
+        if (updateCourse == null) {
 
-        }else{
-            try{
+        } else {
+            try {
                 completedCourses.put(updateCourse, courseGrade);
                 for (Course course : this.currentCourses) {
                     try {
@@ -417,21 +411,18 @@ public class Student extends User {
                             currentCourses.remove(course);
                             break;
                         }
-                    }
-                    catch (NullPointerException e){
-    
+                    } catch (NullPointerException e) {
+
                     }
                 }
                 updateCredits();
                 updateOverallGrade();
+            } catch (NullPointerException e) {
+                // Course courseisnull = new Course();
+                // this.completedCourses.put(courseisnull, courseGrade);
             }
-            catch (NullPointerException e){
-            //Course courseisnull = new Course();
-            //this.completedCourses.put(courseisnull, courseGrade);
         }
-    }
-        
-        
+
     }
     /*
      * Updates students completed course
@@ -455,14 +446,14 @@ public class Student extends User {
      */
 
     public void updateCurrentCourses(Course course) {
-        if(getCurrentCourses().contains(course) || course == null){
+        if (getCurrentCourses().contains(course) || course == null) {
 
-        }else{
+        } else {
             ArrayList<Course> updatedclasses = getCurrentCourses();
-        updatedclasses.add(course);
-        setCurrentCourses(updatedclasses);
+            updatedclasses.add(course);
+            setCurrentCourses(updatedclasses);
         }
-        
+
     }
     /*
      * updates the students current courses
@@ -499,13 +490,13 @@ public class Student extends User {
 
     public void addElective(Elective elect) {
         if (currentElectives != null && elect != null) {
-            if(currentElectives.contains(elect)){
+            if (currentElectives.contains(elect)) {
 
-            }else{
+            } else {
                 currentElectives.add(elect);
-            // System.out.println("Added Elective: " + elect.getName());
+                // System.out.println("Added Elective: " + elect.getName());
             }
-            
+
         }
     }
 
@@ -515,7 +506,7 @@ public class Student extends User {
         // good match
         if (this.currentElectives != null) {
             for (Elective elective : this.currentElectives) {
-                if(elect == null){
+                if (elect == null) {
                     break;
                 }
                 if (elective.getName().equals(elect.getName())) {
@@ -528,9 +519,9 @@ public class Student extends User {
     }
 
     public void updateElectiveCompleted(Elective elect) {
-        if(elect == null){
-            
-        }else{
+        if (elect == null) {
+
+        } else {
             removeElective(elect);
 
             if (this.completedElectives == null) {
@@ -559,89 +550,90 @@ public class Student extends User {
     }
 
     public void addNotes(String note) {
-        if(note == null){
+        if (note == null) {
 
-        }else{
+        } else {
             if (notes == null) {
                 this.notes = new ArrayList<String>();
             }
             notes.add(note);
         }
-        
+
     }
 
     public String displayStudent() {
         String resultid = "";
         String resultfirst = "";
         String resultlast = "";
-        if(this.getUscid() == null){
+        if (this.getUscid() == null) {
             resultid = "Error null uscid";
-        }else if(this.getUscid().equals("null")){
+        } else if (this.getUscid().equals("null")) {
             resultid = "Error uscid is string with null";
-        }else{
+        } else {
             resultid = this.getUscid();
         }
 
-        if(this.getFirstName() == null){
+        if (this.getFirstName() == null) {
             resultfirst = "Error null first name";
-        }else if(this.getFirstName().equals("null")){
+        } else if (this.getFirstName().equals("null")) {
             resultfirst = "Error first name is string with null";
-        }else{
+        } else {
             resultfirst = this.getFirstName();
         }
 
-        if(this.getLastName() == null){
+        if (this.getLastName() == null) {
             resultlast = "Error null last name";
-        }else if(this.getLastName().equals("null")){
+        } else if (this.getLastName().equals("null")) {
             resultlast = "Error last name is string with null";
-        }else{
+        } else {
             resultlast = this.getLastName();
         }
         return "Student:: " + resultid + " : " + resultfirst + " " + resultlast;
     }
+
     public static void checkProgress(Student student) {
         System.out.println("\n" + student.getFirstName() + " " + student.getLastName() + "'s Completed Courses: ");
         System.out.println("------------------------------------");
-        
+
         HashMap<Course, String> test = student.getCompletedCourses();
         for (Map.Entry<Course, String> entry : test.entrySet()) {
             Course course = entry.getKey();
             String grade = entry.getValue();
-            try{
+            try {
                 System.out.println(course.getCourseName() + " " + course.getCourseNumber() + " Grade: " + grade);
-            }
-            catch(NullPointerException e){
+            } catch (NullPointerException e) {
                 System.out.println("");
             }
-            
-            
+
         }
-        
-        System.out.println("\n"+ student.getFirstName() + " " + student.getLastName() +"'s Remaining Courses:");
+
+        System.out.println("\n" + student.getFirstName() + " " + student.getLastName() + "'s Remaining Courses:");
         System.out.println("------------------------------------");
         try {
-        for (Course course : student.getCurrentCourses()) {
-            
-            System.out.println(course.getCourseName() + " " + course.getCourseNumber());
-        }
-    } catch (NullPointerException e){
+            for (Course course : student.getCurrentCourses()) {
 
-    }
-        
+                System.out.println(course.getCourseName() + " " + course.getCourseNumber());
+            }
+        } catch (NullPointerException e) {
+
+        }
+
     }
     /*
      * Used to have error where program didnt compile.
-     * Fixed by realizing that only students call this and changed parameter to a student
+     * Fixed by realizing that only students call this and changed parameter to a
+     * student
      */
 
     public static void generateSemesterPlan(User user) {
         try {
 
-            if(user.getType() != UserType.STUDENT){
+            if (user.getType() != UserType.STUDENT) {
                 return;
             }
             Student student = UserList.getInstance().getStudent(user.getUuid());
-            FileWriter writer = new FileWriter("backEnd/txt/" + student.getFirstName() + student.getLastName() + "_SemesterPlan.txt");
+            FileWriter writer = new FileWriter(
+                    "backEnd/txt/" + student.getFirstName() + student.getLastName() + "_SemesterPlan.txt");
             writer.write(student.getFirstName() + " " + student.getLastName() + "'s 8-Semester Plan:\n\n");
             ArrayList<Course> coursesToTake = new ArrayList<>(student.getCurrentCourses());
             for (int i = 1; i <= 8; i++) {
@@ -650,13 +642,15 @@ public class Student extends User {
                 writer.write("Courses to Take:\n");
                 // TODO: fix the logic
                 for (Course course : coursesToTake) {
-                    writer.write(course.getCourseSubject() + " " + course.getCourseNumber() + " - " + course.getCourseName() + "\n");
+                    writer.write(course.getCourseSubject() + " " + course.getCourseNumber() + " - "
+                            + course.getCourseName() + "\n");
                 }
                 writer.write("\n");
             }
             writer.close();
-            System.out.println("\n8-Semester Plan for " + student.getFirstName() + " " + student.getLastName() + "has been generated and saved to " + 
-            student.getFirstName() + student.getLastName() + "SemesterPlan.txt");
+            System.out.println("\n8-Semester Plan for " + student.getFirstName() + " " + student.getLastName()
+                    + "has been generated and saved to " +
+                    student.getFirstName() + student.getLastName() + "SemesterPlan.txt");
         } catch (IOException e) {
             System.out.println("An error occurred while writing the 8-Semester Plan to a file.");
             e.printStackTrace();
@@ -674,31 +668,28 @@ public class Student extends User {
 
 }
 
-
-
-
 /*
  * Tests passed or failed in studenttester:
  * ones with no extra text havent been tested yet
  * tests that pass will be deleted from this list
- 134-may be a faulty test. The .put command will replace the old value
- and the same testcourse is entered twice.
- 506-???
- 522-???
- 534-???
- 544-???
- 562-???
- 592-???
- 618-???
- 643-???
- 673-???
- 692-???
- 704-???
- 724-???
-738-???
-751-???
-771-???
-799-???
-816-???
-833-???
+ * 134-may be a faulty test. The .put command will replace the old value
+ * and the same testcourse is entered twice.
+ * 506-???
+ * 522-???
+ * 534-???
+ * 544-???
+ * 562-???
+ * 592-???
+ * 618-???
+ * 643-???
+ * 673-???
+ * 692-???
+ * 704-???
+ * 724-???
+ * 738-???
+ * 751-???
+ * 771-???
+ * 799-???
+ * 816-???
+ * 833-???
  */

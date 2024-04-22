@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.input.MouseEvent;
 
-
 public class advisorSearchController {
 
     @FXML
@@ -53,9 +52,9 @@ public class advisorSearchController {
             lName = names[1];
             oneName = false;
         }
-        
+
         ArrayList<Student> students = new ArrayList<Student>();
-        if(oneName == false){
+        if (oneName == false) {
             students = applicationUI.getStudents(fName, lName);
         } else {
             students = applicationUI.getStudents(fName);
@@ -65,9 +64,11 @@ public class advisorSearchController {
 
         for (Student student : students) {
             Label studentLabel = new Label();
-            studentLabel.setText("Student Name: " + student.getFirstName() + " " + student.getLastName() + "\n" + student.getGradeYear() + " " + student.getMajor().getMajor() + ", GPA: " + student.getOverallGrade());
+            studentLabel.setText("Student Name: " + student.getFirstName() + " " + student.getLastName() + "\n"
+                    + student.getGradeYear() + " " + student.getMajor().getMajor() + ", GPA: "
+                    + student.getOverallGrade());
             studentLabel.setId("Student");
-            //System.out.println("STUDENT");
+            // System.out.println("STUDENT");
             studentLabel.getStyleClass().add("student-label");
             studentLabel.setOnMouseClicked(event -> {
                 try {
@@ -87,7 +88,7 @@ public class advisorSearchController {
         String labelText = label.getText();
         System.out.println("Clicked label text: " + labelText);
         ApplicationUI applicationUI = ApplicationUI.getInstance();
-        
+
         int firstNameStartIndex = labelText.indexOf("Student Name:") + "Student Name: ".length();
         int firstNameEndIndex = labelText.indexOf(" ", firstNameStartIndex);
         String firstName = labelText.substring(firstNameStartIndex, firstNameEndIndex);

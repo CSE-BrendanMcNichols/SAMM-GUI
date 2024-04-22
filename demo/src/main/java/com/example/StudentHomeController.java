@@ -64,11 +64,11 @@ public class StudentHomeController {
     private void initialize() {
         ApplicationUI applicationUI = ApplicationUI.getInstance();
 
-        HelloName.setText("Hello, " + applicationUI.getStudent().getFirstName() + " " + applicationUI.getStudent().getLastName() + "!");
+        HelloName.setText("Hello, " + applicationUI.getStudent().getFirstName() + " "
+                + applicationUI.getStudent().getLastName() + "!");
     }
 
-
-@FXML
+    @FXML
     private void Logout() throws IOException {
         Code.backEnd.ApplicationUI.saveData();
         App.setRoot("login");
