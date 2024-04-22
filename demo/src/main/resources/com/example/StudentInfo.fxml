@@ -28,15 +28,15 @@
             <VBox prefHeight="389.0" prefWidth="334.0">
                <children>
                   <Label fx:id="yearLabel" text="Year" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
                   <Label fx:id="majorLabel" text="Major" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <AnchorPane prefHeight="15" prefWidth="334.0" />
                   <Label fx:id="minorLabel" text="Minor" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
                   <Label fx:id="appAreaLabel" text="Application Area" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
                   <Label fx:id="gpaLabel" text="GPA" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
                   <Label fx:id="currentClassesLabel" text="Current Classes" />
                </children>
                <padding>

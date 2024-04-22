@@ -37,6 +37,7 @@ public class StudentInfoController {
         Name.setText("Hello, " + applicationUI.getStudent().getFirstName() + " " + applicationUI.getStudent().getLastName() + "!");
         yearLabel.setText("Year: " + currentStudent.getGradeYear().toString());
         majorLabel.setText("Major: " + currentStudent.getMajor().getMajor());
+        minorLabel.setText("Minor: N/A");
         appAreaLabel.setText("Application Area: " + currentStudent.getApplicationArea());
         gpaLabel.setText("GPA: " + String.format("%.2f", currentStudent.calculateGPA()));
 
