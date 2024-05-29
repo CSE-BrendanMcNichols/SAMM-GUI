@@ -23,20 +23,20 @@
             <Label fx:id="HelloName" text="Hello, Student!" textAlignment="CENTER" />
             <Label text="What would you like to do today?" />
             <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="ViewInfo" mnemonicParsing="false" onAction="#viewInfo" text="View Your Information" />
-            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="ViewSchedule" mnemonicParsing="false" onAction="#viewSchedule" text="View Your Schedule" />
-            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="ViewRoadmap" mnemonicParsing="false" onAction="#viewRoadmap" text="View Your Roadmap" />
-            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="TrackProgress" mnemonicParsing="false" onAction="#trackProgress" text="Track Your Progress" />
-            <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-            <Button fx:id="ViewSendMessage" mnemonicParsing="false" onAction="#viewSendMessage" text="View Or Send A Message" />
+            <Button fx:id="ViewInfo" mnemonicParsing="false" onAction="#viewInfo" text="View Your Information" prefWidth="180.0"/>
+            <AnchorPane prefHeight="25.0" prefWidth="334.0" />
+            <Button fx:id="ViewSchedule" mnemonicParsing="false" onAction="#viewSchedule" text="View Your Schedule" prefWidth="180.0"/>
+            <AnchorPane prefHeight="25.0" prefWidth="334.0" />
+            <Button fx:id="ViewRoadmap" mnemonicParsing="false" onAction="#viewRoadmap" text="View Your Roadmap" prefWidth="180.0"/>
+            <AnchorPane prefHeight="25.0" prefWidth="334.0" />
+            <Button fx:id="TrackProgress" mnemonicParsing="false" onAction="#trackProgress" text="Track Your Progress" prefWidth="180.0"/>
+            <AnchorPane prefHeight="25.0" prefWidth="334.0" />
+            <Button fx:id="ViewSendMessage" mnemonicParsing="false" onAction="#viewSendMessage" text="View Or Send A Message" prefWidth="180.0"/>
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="Logout" mnemonicParsing="false" onAction="#logout" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />

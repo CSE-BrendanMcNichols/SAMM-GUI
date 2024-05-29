@@ -43,6 +43,10 @@ public class studentLoginController {
         } else {
             signinText.setText("Invalid Login");
         }
+    }
 
+    @FXML
+    private void Back() throws IOException {
+        App.setRoot("login");
     }
 }

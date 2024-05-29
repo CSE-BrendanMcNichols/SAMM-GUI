@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StudentInfoController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -26,29 +27,37 @@
             </VBox>
             <VBox prefHeight="389.0" prefWidth="334.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" text="Year" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Major" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Minor" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Application Area" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="GPA" />
-                  <AnchorPane prefHeight="42.0" prefWidth="334.0" />
-                  <Label text="Current Classes" />
+                  <Label fx:id="yearLabel" text="Year" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
+                  <Label fx:id="majorLabel" text="Major" />
+                  <AnchorPane prefHeight="15" prefWidth="334.0" />
+                  <Label fx:id="minorLabel" text="Minor" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
+                  <Label fx:id="appAreaLabel" text="Application Area" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
+                  <Label fx:id="gpaLabel" text="GPA" />
+                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
+                  <Label fx:id="currentClassesLabel" text="Current Classes" />
                </children>
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
+            <Button fx:id="Back" mnemonicParsing="false" onAction="#Back" text="Back" />
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="LogoutAdvisorInfo" mnemonicParsing="false" prefHeight="6.0" prefWidth="54.0" text="Logout" BorderPane.alignment="CENTER" />
+      <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" prefHeight="37.0" prefWidth="83.0" text="Logout" BorderPane.alignment="CENTER" />
    </bottom>
    <stylesheets>
      <URL value="@style.css" />
    </stylesheets>
+   <top>
+      <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@Images/Test.png" />
+         </image>
+      </ImageView>
+   </top>
 </BorderPane>

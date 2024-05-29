@@ -13,8 +13,8 @@ public class Course {
     private ArrayList<Semester> courseAvailability;
     private String courseDescription;
     private int courseHours;
-    private char minGrade;
-    private CourseState courseStatus;
+    private char minGrade = 'D';
+    private CourseState courseStatus = CourseState.NOT_STARTED;
 
     public Course() {
         this.courseName = "EMPTY CLASS";
@@ -141,7 +141,7 @@ public class Course {
     }
 
     public String displayCourse() {
-        return "Course Number:" + courseNumber + " Course Name:" + courseName + " Subject: " + courseSubject + "\n";
+        return "Course Number: " + courseNumber + "\nCourse Name: " + courseName + "\nCourse Subject: " + courseSubject + "\n";
         // return courseName;
     }
 

@@ -10,14 +10,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StudentInfoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StudentCurrentClassesController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="334.0">
                <children>
                   <Label fx:id="Name" text="Name" textAlignment="CENTER" />
-                  <Label text="Information" />
                   <AnchorPane prefHeight="42.0" prefWidth="334.0">
                      <children>
                         <Line endX="100.0" layoutX="168.0" startX="-100.0" />
@@ -27,15 +26,9 @@
             </VBox>
             <VBox prefHeight="389.0" prefWidth="334.0">
                <children>
-                  <Label fx:id="yearLabel" text="Year" />
                   <AnchorPane prefHeight="15.0" prefWidth="334.0" />
-                  <Label fx:id="majorLabel" text="Major" />
-                  <AnchorPane prefHeight="15" prefWidth="334.0" />
-                  <Label fx:id="minorLabel" text="Minor" />
-                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
-                  <Label fx:id="appAreaLabel" text="Application Area" />
-                  <AnchorPane prefHeight="15.0" prefWidth="334.0" />
-                  <Label fx:id="gpaLabel" text="GPA" />
+                  <Label fx:id="currentClassesLabel" text="Current Classes" />
+                  
                </children>
                <padding>
                   <Insets left="20.0" right="20.0" />

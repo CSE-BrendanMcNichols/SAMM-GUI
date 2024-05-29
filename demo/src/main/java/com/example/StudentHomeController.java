@@ -31,12 +31,24 @@ public class StudentHomeController {
 
     @FXML
     private void viewInfo() throws IOException {
-        App.setRoot("studentInfo");
+        App.setRoot("StudentInfo");
     }
 
     @FXML
+    private void ViewCurrentClasses() throws IOException {
+        App.setRoot("StudentCurrentClasses");
+    }
+
+    @FXML
+    private void ViewCompletedClasses() throws IOException {
+        App.setRoot("StudentCompletedClasses");
+    }
+
+
+
+    @FXML
     private void viewSchedule() throws IOException {
-        App.setRoot("studentSchedule");
+        App.setRoot("StudentScheduleViewing");
     }
 
     @FXML
@@ -64,6 +76,13 @@ public class StudentHomeController {
     private void initialize() {
         ApplicationUI applicationUI = ApplicationUI.getInstance();
 
-        HelloName.setText("Hello, " + applicationUI.getStudent().getFirstName() + " " + applicationUI.getStudent().getLastName() + "!");
+        HelloName.setText("Hello, " + applicationUI.getStudent().getFirstName() + " "
+                + applicationUI.getStudent().getLastName() + "!");
+    }
+
+    @FXML
+    private void Logout() throws IOException {
+        Code.backEnd.ApplicationUI.saveData();
+        App.setRoot("login");
     }
 }
